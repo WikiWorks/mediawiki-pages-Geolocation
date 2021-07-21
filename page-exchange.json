@@ -1,0 +1,66 @@
+{
+    "publisher": "Ike Hecht",
+    "author": "Ike Hecht",
+    "language": "en",
+    "url": "https://github.com/NationalGalleryOfArt/mediawiki-pages-Geolocation",
+    "packages": {
+        "Geolocation": {
+            "globalID": "Geolocation",
+            "description": "A collection of wiki pages for easy inclusion of the Geolocation semantics in Mediawiki projects.",
+            "version": "0.1",
+            "pages": [
+                {
+                    "name": "Smw service online maps",
+                    "namespace": "NS_MEDIAWIKI",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/MediaWiki%2FSmw%20service%20online%20maps.mediawiki"
+                },
+                {
+                    "name": "Geolocation",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Project%2FGeolocation.mediawiki"
+                },
+                {
+                    "name": "Coordinates",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Property%2FCoordinates.mediawiki"
+                },
+                {
+                    "name": "Full address",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Property%2FFull%20address.mediawiki"
+                },
+                {
+                    "name": "Geolocation link",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Property%2FGeolocation%20link.mediawiki"
+                },
+                {
+                    "name": "Latitude",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Property%2FLatitude.mediawiki"
+                },
+                {
+                    "name": "Longitude",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Property%2FLongitude.mediawiki"
+                },
+                {
+                    "name": "Geolocation",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Template%2FGeolocation.mediawiki"
+                },
+                {
+                    "name": "Geolocation field set",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/NationalGalleryOfArt\/mediawiki-pages-Geolocation\/main\/Template%2FGeolocation%20field%20set.mediawiki"
+                }
+            ],
+            "requiredExtensions": [
+                "PageForms",
+                "ParserFunctions",
+                "SemanticMediaWiki",
+                "Maps"
+            ]
+        }
+    }
+}

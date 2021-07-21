@@ -1,0 +1,30 @@
+;Address only
+{{Geolocation
+|Full address=Something 
+}}
+;Wrong geocoding
+{{Geolocation
+|Full address=Something 
+|Geolocation link=coordinates
+}} ''&ndash; We want to suppress it''
+;Hidden link
+{{Geolocation
+|Full address=Something
+|Geolocation link=suppress
+}}
+;Display [[Mediawiki:Geolocation-message|system message]]
+{{Geolocation
+|Full address=A Guarda, 26780, Spain
+|Geolocation link=message
+}}
+;Display coordinates
+{{Geolocation
+|Full address=A Guarda, 26780, Spain
+|Geolocation link=coordinates
+}}
+;Display coordinates (geocoding failed)
+{{Geolocation
+|Full address=Something strange
+|Geolocation link=coordinates
+}} ''&ndash; Choose "suppress" to hide the error message''
+[[Category:Mediawiki-pages-Geolocation]]

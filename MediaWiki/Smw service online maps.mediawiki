@@ -1,0 +1,1 @@
+OpenStreetMap|https://www.openstreetmap.org/?mlat=$3&mlon=$4#map=16/$3/$4<noinclude>[[Category:Mediawiki-pages-Geolocation]]</noinclude>

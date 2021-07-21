@@ -1,0 +1,8 @@
+This is a property of type [[Has type::Text]].
+
+The allowed values for this property are:
+* [[Allows value::coordinates]]
+* [[Allows value::message]]
+* [[Allows value::suppress]]
+
+[[Category:Mediawiki-pages-Geolocation]]

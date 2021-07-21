@@ -1,0 +1,49 @@
+<includeonly>{{#if:{{{Full address|}}}|{{#switch:{{{1|}}}|inline=&#32;&middot;&#32;|#default=}}{{{Full address|}}}{{#set: Full address={{{Full address|}}} }}}}<!--
+
+-->{{#switch: {{{Geolocation link|}}}|
+     |suppress = <!-- Nothing to do --> 
+     |#default =  <!-- New line if address is set, unless the "inline" or "plain" switches are on
+  -->{{#switch:{{{1|}}}|inline=&#32;&middot;&#32;|plain=|#default=<br>}}<!-- Geo data and link rendering
+  -->{{#if: {{{Coordinates|}}}
+        |<!-- Coordinates have priority
+         -->{{#set:
+              |Latitude={{#explode:{{{Coordinates|}}}|,|0}}
+              |Longitude={{#explode:{{{Coordinates|}}}|,|1}}
+              |Coordinates={{{Coordinates|}}}
+            }}<!--
+        -->[https://www.openstreetmap.org/?mlat={{#explode:{{{Coordinates|}}}|,|0}}&mlon={{#explode:{{{Coordinates|}}}| |1}}#map=16/{{#explode:{{{Coordinates}}}|,|0}}/{{#explode:{{{Coordinates|}}}| |1}} <!--
+        -->{{#switch: {{{Geolocation link|}}}
+              |message=<span class="geolocation-link">View map</span>
+              |coordinates=<span class="geolocation-link">{{#coordinates:{{{Coordinates|}}}|format=dms|directional=yes}}</span>
+           }}]
+        |<!-- Trying geocoding
+         -->{{#ifeq: {{#sub:{{#geocode:{{{Full address|}}}}}|0|3}} 
+              |Geo
+              |<!-- Geocoding failure --><span class="geolocation-link geolocation-link-failed">Geocoding failed</span>
+              |<!-- Geocoding success 
+               -->{{#set:
+                    |Latitude={{#explode:{{#geocode:{{{Full address|}}}}}|,|0}}
+                    |Longitude={{#explode:{{#geocode:{{{Full address|}}}}}|,|1}}
+                    |Coordinates={{#geocode:{{{Full address|}}} }}
+                  }}<!--
+              -->[https://www.openstreetmap.org/?mlat={{#explode:{{#geocode:location={{{Full address|}}}|format=float|directional=no}}|,|0}}&mlon={{#explode:{{#geocode:location={{{Full address|}}}|format=float|directional=no}}| |1}}#map=16/{{#explode:{{#geocode:location={{{Full address|}}}|format=float|directional=no}}|,|0}}/{{#explode:{{#geocode:location={{{Full address|}}}|format=float|directional=no}}| |1}} <!--    -->{{#switch: {{{Geolocation link|}}}
+                   |message=<span class="geolocation-link">View map</span>
+                   |coordinates=<span class="geolocation-link">{{#geocode:{{{Full address|}}} }}</span>
+                }}]
+           }}
+      }}
+ }}</includeonly><noinclude>[[Category:Mediawiki-pages-Geolocation]]
+;Usage
+<pre>
+{{Geolocation
+|Full address     =  #
+|Coordinates      =  #
+|Geolocation link =  # message | coordinates | suppress *
+|inline              # inline | plain | <empty> **
+}}
+
+----
+* message will show View map, coordinates fill show coordinates, suppress will fully disable geolocation (coordinates and the output)
+** if empty, will put the map link on the new line; plain does nothing; inline puts a middot before the link
+</pre>
+</noinclude>

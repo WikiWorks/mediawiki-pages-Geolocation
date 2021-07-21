@@ -1,0 +1,26 @@
+<includeonly>{{#ifeq: {{{Full address|}}}|hide||
+<tr>
+  <td> '''Full address:''' </td>
+  <td>  {{{field{{!}}Full address{{!}}input type=text{{!}}feeds to map={{{1|}}}[Coordinates]}}} </td>
+</tr>
+}}
+<tr id="geolocation-coordinates">
+  <td></td>
+  <td>{{{field{{!}}Coordinates{{!}}input type=leaflet}}}</td>
+</tr>
+<tr style="vertical-align:top">
+  <td> '''Display coordinates:''' </td>
+  <td> {{{field{{!}}Geolocation link{{!}}property=Geolocation link{{!}}input type=dropdown{{!}}default=message{{!}}show on select=coordinates=>geolocation-coordinates;coordinates=>geolocation-coordinates-info;message=>geolocation-coordinates;message=>geolocation-message;suppress=>geolocation-suppress{{!}}mandatory}}}
+<div id="geolocation-suppress" style="display:inline">''Do not use coordinates.''</div>
+<div id="geolocation-message" style="display:inline">''"View map" link will be shown.''</div>
+<div id="geolocation-coordinates-info" style="display:inline">''A link with coordinates will be shown.''</div></td>
+</tr></includeonly><noinclude>[[Category:Mediawiki-pages-Geolocation]]
+;Usage
+Designed to be used inside the other template section of PageForms form.
+<pre>
+{{Geolocation field set
+|Person                 # (optional) Name of the template hosting the Coordinates field
+|Full address = hide    # (optional) 'hide' will suppress the Full address field in the form        
+}}
+</pre>
+</noinclude>
