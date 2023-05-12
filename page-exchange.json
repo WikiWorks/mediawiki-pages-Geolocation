@@ -5,7 +5,7 @@
     "url": "https://github.com/WikiWorks/mediawiki-pages-Geolocation",
     "packages": {
         "Geolocation": {
-            "globalID": "Geolocation",
+            "globalID": "com.wikiworks.Geolocation",
             "description": "A collection of wiki pages for easy inclusion of the Geolocation semantics in Mediawiki projects.",
             "version": "0.1",
             "pages": [
